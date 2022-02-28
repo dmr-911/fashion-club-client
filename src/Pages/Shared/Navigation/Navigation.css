@@ -1,0 +1,25 @@
+.nav-icon{
+    float: left;
+    height: 30px;
+    padding: 7px 5px 0 3px;
+    width: 40px;
+    margin-top: -6px;
+    background-repeat: no-repeat;
+}
+.nav-account{
+    background-image: url(../../../images/navigation/account.svg);
+}
+.nav-wishlist{
+    background-image: url(../../../images/navigation/wishlist.svg);
+}
+.nav-cart{
+    background-image: url(../../../images/navigation/basket.svg);
+}
+.nav-text{
+    position: relative;
+    bottom: 0px;
+    right: 3px;
+}
+.navbar-collapse{
+    flex-grow: 0;
+}
