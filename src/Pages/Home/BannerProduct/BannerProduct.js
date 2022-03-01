@@ -18,7 +18,20 @@ const BannerProduct = () => {
         .then(data => setProduct(data))
     },[]);
 
-    const handleAddToBag = () =>{};
+    const handleAddToBag = (id) =>{
+        fetch('https://fakestoreapi.com/carts/1',{
+            method:"PATCH",
+            body:JSON.stringify(
+                {
+                    userId: 1,
+                    date: new Date(),
+                    products:[{productId: id,quantity: 1}]
+                }
+            )
+        })
+            .then(res=>res.json())
+            .then(json=>console.log(json))
+    };
     const handleClick = () =>{};
     const handleSelect = (selectedIndex, e) => {
         setIndex(selectedIndex);}
@@ -64,7 +77,7 @@ const BannerProduct = () => {
                         <p><span className="text-danger fw-bold fs-3">${Math.ceil(product?.price - (20*product?.price/100))}</span> (20% off)</p>
                         <p><b>Colour : </b> Coming soon</p>
                         <p><b>Options : </b> Coming soon</p>
-                        <button className="btn btn-success w-25 fs-5 my-3 me-3" onClick={()=>handleAddToBag()} disabled={disabled}>ADD TO BAG</button>
+                        <button className="btn btn-success w-25 fs-5 my-3 me-3" onClick={()=>handleAddToBag(product.id)} disabled={disabled}>ADD TO BAG</button>
                         <button className="btn btn-danger w-25 fs-5 my-3" onClick={()=>handleAddToBag()} disabled={disabled}>Purchase Now</button>
 
                         {

@@ -7,6 +7,7 @@ import AuthProvider from './Context/AuthProvider';
 import LogIn from './Pages/Account/LogIn/LogIn';
 import SignUp from './Pages/Account/SignUp/SignUp';
 import Home from './Pages/Home/Home/Home';
+import {AppRoutes} from './routes';
 
 function App() {
   return (

@@ -5,7 +5,21 @@ import './Product.css';
 import love from '../../../../images/navigation/wishlist.svg';
 
 const Product = ({product}) => {
-    const {image, title, description, price} = product;
+    const {image, title, description, price, id} = product;
+    const handleAddCart = (id) =>{
+        fetch('https://fakestoreapi.com/carts/1',{
+            method:"PATCH",
+            body:JSON.stringify(
+                {
+                    userId: 1,
+                    date: new Date(),
+                    products:[{productId: id,quantity: 1}]
+                }
+            )
+        })
+            .then(res=>res.json())
+            .then(json=>console.log(json))
+    }
     return (
         <Row xs={1} md={2} className="border border-1 rounded mt-3 mb-1 py-3">
             <Col md={4}>
@@ -27,7 +41,7 @@ const Product = ({product}) => {
                 </p>
                 <button className="btn-favorite ms-5"><img src={love} className="favorite-img" alt="" /></button>
                 </div>
-                <button className="btn-general">Add to cart</button>
+                <button className="btn-general" onClick={()=> handleAddCart(id)}>Add to cart</button>
             </Col>
         </Row>
     );
