@@ -7,7 +7,7 @@ import love from '../../../../images/navigation/wishlist.svg';
 const Product = ({product}) => {
     const {image, title, description, price} = product;
     return (
-        <Row xs={1} md={2} className="border border-1 rounded mt-3 py-3">
+        <Row xs={1} md={2} className="border border-1 rounded mt-3 mb-1 py-3">
             <Col md={4}>
                 <img src={image} className="trending-product-img" alt="" />
             </Col>
@@ -15,7 +15,7 @@ const Product = ({product}) => {
                 <h5>{title}</h5>
                 <p>{description}</p>
                 <del className="me-3">${price + (price*20/100)}</del>
-                <b>$ {price}</b>
+                <b style={{fontSize: '22px'}}>${price}</b>
                 <div className="d-flex align-items-center my-3">
                 <p><small><Rating
                                 initialRating={product.rating?.rate}

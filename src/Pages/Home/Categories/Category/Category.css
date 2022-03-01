@@ -1,0 +1,40 @@
+.category-img{
+    height: 200px;
+    width: 200px;
+}
+.category-title{
+    position: absolute!important;
+    height: 285px;
+    width: 202px;
+    background-image: linear-gradient(rgb(51, 48, 48), rgb(49, 48, 48));
+}
+.service-card{
+    overflow: hidden;
+    cursor: pointer;
+}
+.service-img{
+    position: relative;
+    transition: transform .5s ease-in-out,opacity .3s,-webkit-transform .5s ease-in-out;
+}
+.service-img:hover{
+    transform: scale3d(1.1,1.1,1);
+    opacity: .9;
+}
+.service-title{
+    position: absolute;
+    bottom: 65px;
+    left: 20px;
+    transition: all .7s;
+}
+.color-dark{
+    color: #002147;
+}
+.color-orrange{
+    color: salmon;
+}
+@media (max-width : 688px) {
+    .service-title{
+        bottom: 90px;
+        left: 110px;
+    }
+}

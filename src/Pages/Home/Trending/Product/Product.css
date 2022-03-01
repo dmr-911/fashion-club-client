@@ -1,7 +1,9 @@
 .btn-favorite{
     border: none;
+    background-color: transparent;
 }
 .favorite-img{
     height: 30px;
     width: 30px;
+    background-color: transparent;
 }

@@ -14,7 +14,7 @@ const Trending = () => {
     return (
         <Container>
             <div className="d-flex justify-content-between mb-3">
-                <b>Trending Clothes</b>
+                <h4><b>Trending Clothes</b></h4>
                 <button className="btn-general">View all</button>
             </div>
             <Row xs={1} className="g-3">
