@@ -23,3 +23,10 @@
 .navbar-collapse{
     flex-grow: 0;
 }
+
+
+@media (max-width: 688px) {
+    .nav-drop{
+        flex-direction: column;
+    }
+}

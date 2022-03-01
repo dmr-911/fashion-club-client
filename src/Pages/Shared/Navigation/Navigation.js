@@ -15,7 +15,7 @@ const Navigation = () => {
                     className="mx-auto w-100 my-2 my-lg-0 justify-content-around"
                 >
                     
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center nav-drop">
                     <NavDropdown className="mx-2" title="Men" id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Men</NavDropdown.Item>
                     <NavDropdown.Divider />
@@ -35,7 +35,7 @@ const Navigation = () => {
                         Beauty
                     </Nav.Link>
                     </div>
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center nav-drop">
 
                     <Nav.Link className="mx-2" as={Link} to={user.email ? "" : "/login"} title={user.email ? user.displayName : "Login"} className="mx-auto">
                         <span className="nav-icon nav-account">
