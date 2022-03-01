@@ -52,6 +52,15 @@
       width: 60px;
   }
 
+  .btn-banner{
+    height: 28px;
+    border: none;
+    border-radius: 4px;
+    padding: 0 8px;
+    cursor: pointer;
+  }
+
+
   @media (max-width: 688px) {
     .banner-slider{
       margin-bottom: 15px;

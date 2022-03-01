@@ -48,7 +48,7 @@ const Navigation = () => {
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                     </NavDropdown>
-                    <Nav.Link className="mx-2" as={Link} to="/" title={user.email ? user.displayName : "Login"} className="mx-auto">
+                    <Nav.Link className="mx-2" as={Link} to="/" className="mx-auto">
                         Beauty
                     </Nav.Link>
                     </div>
@@ -64,9 +64,9 @@ const Navigation = () => {
                             <span className="nav-text">{count}</span>
                         </span>
                     </Nav.Link>
-                    <Nav.Link className="mx-2" as={Link} to="/" className="mx-auto">
+                    <Nav.Link className="mx-2" as={Link} to="/login" className="mx-auto">
           {              user.email ?
-                        <span class="fa-solid fa-right-from-bracket sign-out" onClick={logOut}></span>
+                        <span title={user.email ? user.displayName : "Login"} class="fa-solid fa-right-from-bracket sign-out" onClick={logOut}></span>
                         :
                         <span className="nav-icon nav-account">
                         </span>}

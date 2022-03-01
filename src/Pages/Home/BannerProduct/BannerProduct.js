@@ -13,7 +13,7 @@ const BannerProduct = () => {
     const [disabled, setDisabled] = useState(false)
 
     useEffect(()=>{
-        fetch('https://fakestoreapi.com/products/5')
+        fetch('https://fakestoreapi.com/products/17')
         .then(res => res.json())
         .then(data => setProduct(data))
     },[]);
@@ -88,8 +88,8 @@ const BannerProduct = () => {
                         <p><span className="text-danger fw-bold fs-3">${Math.ceil(product?.price - (20*product?.price/100))}</span> (20% off)</p>
                         <p><b>Colour : </b> Coming soon</p>
                         <p><b>Options : </b> Coming soon</p>
-                        <button className="btn btn-success fs-5 my-3 me-3" onClick={()=>handleAddToBag(product.id)} disabled={disabled}>ADD TO BAG</button>
-                        <button className="btn btn-danger fs-5 my-3" onClick={handleModal}>Purchase Now</button>
+                        <button className="btn-success my-3 me-3 btn-banner" onClick={()=>handleAddToBag(product.id)} disabled={disabled}>ADD TO BAG</button>
+                        <button className="btn-danger my-3 btn-banner" onClick={handleModal}>Purchase Now</button>
 
                         {
                             product?.features && <>
