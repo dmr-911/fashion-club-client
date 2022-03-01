@@ -5,6 +5,7 @@ import Navigation from './Pages/Shared/Navigation/Navigation';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AuthProvider from './Context/AuthProvider';
 import LogIn from './Pages/Account/LogIn/LogIn';
+import SignUp from './Pages/Account/SignUp/SignUp';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Navigation></Navigation>
         <Routes>
           <Route path="login" element={<LogIn></LogIn>}></Route>
+          <Route path="signUp" element={<SignUp></SignUp>}></Route>
         </Routes>
       </Router>
       </AuthProvider>

@@ -76,7 +76,7 @@ const LogIn = () => {
                 {error && <small className="text-danger">{error}</small>}
               <p className="fw-bold">
                New to our site ? Please create an account{" "}
-               <Link to="/register"><i className="fas fa-sign-in">Register</i></Link>
+               <Link to="/signUp"><i className="fas fa-sign-in">Sign up</i></Link>
              </p>
       </div>
   </Container>
