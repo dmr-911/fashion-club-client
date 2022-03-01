@@ -5,6 +5,7 @@ import useAuth from '../../../hooks/useAuth';
 import Rating from 'react-rating';
 
 import './BannerProduct.css';
+import PurchaseModal from './PurchaseModal';
 
 const BannerProduct = () => {
     const [product, setProduct] = useState({});
@@ -36,6 +37,11 @@ const BannerProduct = () => {
     const handleClick = () =>{};
     const handleSelect = (selectedIndex, e) => {
         setIndex(selectedIndex);}
+
+    const [modalShow, setModalShow] = React.useState(false);
+    const handleModal = () =>{
+        setModalShow(true);
+    }
 
     return (
         <Container className="mt-5">
@@ -79,7 +85,7 @@ const BannerProduct = () => {
                         <p><b>Colour : </b> Coming soon</p>
                         <p><b>Options : </b> Coming soon</p>
                         <button className="btn btn-success w-25 fs-5 my-3 me-3" onClick={()=>handleAddToBag(product.id)} disabled={disabled}>ADD TO BAG</button>
-                        <button className="btn btn-danger w-25 fs-5 my-3" onClick={()=>handleAddToBag()}>Purchase Now</button>
+                        <button className="btn btn-danger w-25 fs-5 my-3" onClick={handleModal}>Purchase Now</button>
 
                         {
                             product?.features && <>
@@ -123,6 +129,10 @@ const BannerProduct = () => {
                     </div> 
                     </Col>
                 </Row>
+                <PurchaseModal
+                    show={modalShow}
+                    onHide={() => setModalShow(false)}
+                />
             </Container>
 
         </Container>
