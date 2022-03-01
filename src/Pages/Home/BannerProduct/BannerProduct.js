@@ -53,7 +53,7 @@ const BannerProduct = () => {
             <Container>
                 <Row>
                     <Col xs={12} md={5} style={{height: "auto"}}>
-                    <Carousel className="h-75" activeIndex={index} onSelect={handleSelect}>
+                    <Carousel className="h-75 banner-slider" activeIndex={index} onSelect={handleSelect}>
                         <Carousel.Item>
                             <img
                             src={product?.image}
@@ -66,7 +66,7 @@ const BannerProduct = () => {
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>
-                    <Row xs={1} md={3} lg={3}>
+                    <Row xs={1} md={3} lg={3} className="side-banner">
                         <Col>
                             <img src={product.image} className="tail-banner-img" alt="" />
                         </Col>
@@ -87,8 +87,8 @@ const BannerProduct = () => {
                         <p><span className="text-danger fw-bold fs-3">${Math.ceil(product?.price - (20*product?.price/100))}</span> (20% off)</p>
                         <p><b>Colour : </b> Coming soon</p>
                         <p><b>Options : </b> Coming soon</p>
-                        <button className="btn btn-success w-25 fs-5 my-3 me-3" onClick={()=>handleAddToBag(product.id)} disabled={disabled}>ADD TO BAG</button>
-                        <button className="btn btn-danger w-25 fs-5 my-3" onClick={handleModal}>Purchase Now</button>
+                        <button className="btn btn-success fs-5 my-3 me-3" onClick={()=>handleAddToBag(product.id)} disabled={disabled}>ADD TO BAG</button>
+                        <button className="btn btn-danger fs-5 my-3" onClick={handleModal}>Purchase Now</button>
 
                         {
                             product?.features && <>

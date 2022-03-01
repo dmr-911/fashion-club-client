@@ -34,7 +34,7 @@ const Product = ({product}) => {
     };
 
     return (
-        <Row xs={1} md={2} className="border border-1 rounded mt-3 mb-1 py-3">
+        <Row xs={1} md={2} className="border border-1 rounded mt-3 mb-1 py-1">
             <Col md={4}>
                 <img src={image} className="trending-product-img" alt="" />
             </Col>
@@ -43,7 +43,7 @@ const Product = ({product}) => {
                 <p><small>{description}</small></p>
                 <del className="me-3">${price + (price*20/100)}</del>
                 <b style={{fontSize: '18px'}}>${price}</b>
-                <div className="d-flex align-items-center my-2">
+                <div className="d-flex align-items-center my-1">
                 <p><small><Rating
                                 initialRating={product.rating?.rate}
                                 readonly
