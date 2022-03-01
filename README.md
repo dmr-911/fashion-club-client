@@ -3,6 +3,7 @@
 A ReactJS application. [Live site link](https://fashion-club-f5817.web.app/).
 
 - React router v6 implemented
+- Firebase authentication implemented
 - Home page has 4 sections
 - Login and Sign up page fully functional
 - Modals and toasts implemented
