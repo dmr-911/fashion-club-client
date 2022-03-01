@@ -23,6 +23,10 @@
 .navbar-collapse{
     flex-grow: 0;
 }
+.sign-out{
+    color: black;
+    font-size: 26px;
+}
 
 
 @media (max-width: 688px) {

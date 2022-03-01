@@ -56,10 +56,7 @@ const Navigation = () => {
                     </div>
                     <div className="d-flex align-items-center nav-drop">
 
-                    <Nav.Link className="mx-2" as={Link} to={user.email ? "" : "/login"} title={user.email ? user.displayName : "Login"} className="mx-auto">
-                        <span className="nav-icon nav-account">
-                        </span>
-                    </Nav.Link>
+
                     <Nav.Link className="mx-2" as={Link} to="/" className="mx-auto" disabled>
                         <span className="nav-icon nav-wishlist">
                         </span>
@@ -69,7 +66,13 @@ const Navigation = () => {
                             <span className="nav-text">{count}</span>
                         </span>
                     </Nav.Link>
-                    {user.email && <button className="btn btn-danger" onClick={logOut}>LogOut</button>}
+                    <Nav.Link className="mx-2" as={Link} to={user.email ? "" : "/login"} title={user.email ? user.displayName : "Login"} className="mx-auto">
+          {              user.email ?
+                        <span class="fa-solid fa-right-from-bracket sign-out" onClick={logOut}></span>
+                        :
+                        <span className="nav-icon nav-account">
+                        </span>}
+                    </Nav.Link>
                     </div>
                 </Nav>
                 </Navbar.Collapse>

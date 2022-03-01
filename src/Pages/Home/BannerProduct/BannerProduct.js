@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Breadcrumb, Carousel, Col, Container, Form, Row } from 'react-bootstrap';
+import { Breadcrumb, Carousel, Col, Container, Form, Row, Spinner } from 'react-bootstrap';
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import Rating from 'react-rating';
 import {ToastContainer, toast} from 'react-toastify';
@@ -37,7 +37,6 @@ const BannerProduct = () => {
                 toast("Added to the cart");
             })
     };
-    const handleClick = () =>{};
     const handleSelect = (selectedIndex, e) => {
         setIndex(selectedIndex);}
 
@@ -48,7 +47,10 @@ const BannerProduct = () => {
 
     return (
         <Container className="mt-5">
-            <Container className="pt-3">
+            {
+                product.title ?
+                <div>
+                    <Container className="pt-3">
             </Container>
             <Container>
                 <Row>
@@ -148,6 +150,15 @@ const BannerProduct = () => {
                 draggable
                 pauseOnHover
                 />
+                </div>
+                :
+                <div className="d-flex justify-content-center align-items-center w-100" style={{height: '80vh'}}>
+                <div>
+                <Spinner animation="grow" size="sm" />
+                <Spinner animation="grow" />
+                </div>
+              </div>
+            }
         </Container>
     );
 };

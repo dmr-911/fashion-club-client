@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Spinner } from 'react-bootstrap';
 import Item from '../Item/Item';
 import './Cart.css';
 
@@ -34,13 +34,21 @@ const Cart = () => {
 
     return (
         <>
+        
          <Container className="mt-5 pt-5">
             <Row xs={1} className="g-4">
                 {
-                    finalProduct.length && finalProduct.map(item => <Item
+                    finalProduct.length ? finalProduct.map(item => <Item
                     key={item.id}
                     item={item}
                     ></Item>)
+                    :
+                    <div className="d-flex justify-content-center align-items-center w-100" style={{height: '80vh'}}>
+                    <div>
+                    <Spinner animation="grow" size="sm" />
+                    <Spinner animation="grow" />
+                    </div>
+                  </div>
                 }
             </Row>    
          </Container>   
