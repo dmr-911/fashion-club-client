@@ -13,6 +13,8 @@
     cursor: pointer;
 }
 .service-img{
+    display: none;
+    width: 70%;
     position: relative;
     transition: transform .5s ease-in-out,opacity .3s,-webkit-transform .5s ease-in-out;
 }
@@ -21,9 +23,13 @@
     opacity: .9;
 }
 .service-title{
+    color: white;
     position: absolute;
-    bottom: 65px;
+    bottom: 75px;
     left: 20px;
+    transition: all .7s;
+}
+.service-title:hover{
     transition: all .7s;
 }
 .color-dark{
@@ -32,6 +38,12 @@
 .color-orrange{
     color: salmon;
 }
+.back{
+    height: 200px;
+    width: 100%;
+}
+
+
 @media (max-width : 688px) {
     .service-title{
         bottom: 90px;

@@ -16,15 +16,11 @@ const Category = ({category}) => {
     return (
         <Col>
         <Card title={title} onMouseEnter={handleMouseOver} onMouseLeave={handleMouseLeave}>
-          <div className="service-card rounded" style={{backgroundImage : `linear-gradient(rgba(68, 114, 151, 0.5), rgba(0,0,0,0.9)), url(${image})`}}>
-            <Card.Img
-              className="service-img"
-              height="200px"
-              variant="top"
-              src={image}
-            />
+          <div className="service-card rounded" style={{backgroundImage : `linear-gradient(rgba(68, 114, 151, 0.5), rgba(0,0,0,0.9)), url(${image})`, backgroundSize: 'cover'}}>
+            <div className="back" style={{backgroundImage : `linear-gradient(rgba(68, 114, 151, 0.5), rgba(0,0,0,0.9)), url(${image})`,  backgroundSize: 'cover'}}>
+            </div>
             {
-                show && <h5 className="service-title fw-bold text-dark">{title.slice(0, 20)}...</h5>
+                show && <h5 className="service-title fw-bold">{title.slice(0, 20)}...</h5>
             }
           </div>
         </Card>

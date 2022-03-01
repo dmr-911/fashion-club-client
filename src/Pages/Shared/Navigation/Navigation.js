@@ -60,7 +60,7 @@ const Navigation = () => {
                         <span className="nav-icon nav-account">
                         </span>
                     </Nav.Link>
-                    <Nav.Link className="mx-2" as={Link} to="/" className="mx-auto">
+                    <Nav.Link className="mx-2" as={Link} to="/" className="mx-auto" disabled>
                         <span className="nav-icon nav-wishlist">
                         </span>
                     </Nav.Link>

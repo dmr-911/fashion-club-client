@@ -35,10 +35,10 @@ const Product = ({product}) => {
             </Col>
             <Col md={8} className="text-start">
                 <h5>{title}</h5>
-                <p>{description}</p>
+                <p><small>{description}</small></p>
                 <del className="me-3">${price + (price*20/100)}</del>
-                <b style={{fontSize: '22px'}}>${price}</b>
-                <div className="d-flex align-items-center my-3">
+                <b style={{fontSize: '18px'}}>${price}</b>
+                <div className="d-flex align-items-center my-2">
                 <p><small><Rating
                                 initialRating={product.rating?.rate}
                                 readonly
