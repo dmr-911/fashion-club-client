@@ -15,7 +15,7 @@ const Category = ({category}) => {
     }
     return (
         <Col>
-        <Card onMouseEnter={handleMouseOver} onMouseLeave={handleMouseLeave}>
+        <Card title={title} onMouseEnter={handleMouseOver} onMouseLeave={handleMouseLeave}>
           <div className="service-card rounded" style={{backgroundImage : `linear-gradient(rgba(68, 114, 151, 0.5), rgba(0,0,0,0.9)), url(${image})`}}>
             <Card.Img
               className="service-img"

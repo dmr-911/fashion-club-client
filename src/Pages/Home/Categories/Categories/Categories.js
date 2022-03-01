@@ -12,7 +12,7 @@ const Categories = () => {
     },[]);
 
     return (
-        <Container className="mt-4">
+        <Container className="my-4">
             <div className="d-flex justify-content-between mb-3">
                 <h4><b>Shop by categories</b></h4>
                 <button className="btn-general">View all</button>

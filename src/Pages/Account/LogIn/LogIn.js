@@ -6,14 +6,14 @@ import GoogleButton from 'react-google-button';
 import useAuth from '../../../hooks/useAuth';
 
 const LogIn = () => {
-  const { googleSignIn, emailSignIn, error, setError} = useAuth();
+  const { user, googleSignIn, error, login} = useAuth();
 
   const navigate = useNavigate();
   const location = useLocation();
   const destination = location?.state?.from || '/';
 
   const [loginDetails, setLoginDetails] = useState({
-    email: "",
+    name: "",
     password: ""
   });
     const handleOnBlur = (e) =>{
@@ -29,14 +29,12 @@ const LogIn = () => {
 
     const handleSubmit = (e) =>{
       e.preventDefault();
-      emailSignIn(loginDetails.email, loginDetails.password)
-      .then(user =>{
-        navigate(destination);
-      })
-      .catch((error) => {
-        setError(error.message)
-      });
-    }
+
+      login(loginDetails.email, loginDetails.password);
+    };
+
+    console.log(loginDetails);
+    console.log(user);
 
 
 
@@ -52,10 +50,10 @@ const LogIn = () => {
           <form  onSubmit={handleSubmit} className="mb-3">
           <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Control
-              name="email"
+                name="name"
                className="green-form-email green-form-control" 
-               type="email" 
-               placeholder="Enter email" 
+               type="text" 
+               placeholder="Enter user name" 
                onBlur={handleOnBlur}
                />
           </Form.Group>

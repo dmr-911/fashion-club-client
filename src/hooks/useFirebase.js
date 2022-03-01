@@ -7,7 +7,6 @@ initializationAuthentication();
 const useFirebase = () =>{
     const auth = getAuth();
     const [user, setUser] = useState({});
-    const [count, setCount] = useState(0);
     const [error, setError] = useState('');
     const [authError, setAuthError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
@@ -15,33 +14,6 @@ const useFirebase = () =>{
     const [token, setToken] = useState('');
 
     const googleProvider = new GoogleAuthProvider();
-
-    const registerUser = (email, password, name, navigate) => {
-      setIsLoading(true);
-      createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          setAuthError('');
-          const newUser = { email, displayName: name };
-          setUser(newUser);
-
-          // send name to firebase after creation
-          updateProfile(auth.currentUser, {
-            displayName: name
-          }).then(() => {
-          }).catch((error) => {
-          });
-          navigate('/');
-
-        })
-        .catch((error) => {
-          setAuthError(error.message);
-        })
-        .finally(() => setIsLoading(false));
-    }
-
-    const emailSignIn = (email, password) =>{
-      return signInWithEmailAndPassword(auth, email , password);
-    }
 
     const googleSignIn = (location, navigate) => {
       setIsLoading(true);
@@ -55,6 +27,19 @@ const useFirebase = () =>{
           setAuthError(error.message);
         }).finally(() => setIsLoading(false));
     }
+
+    const login = (name, password) =>{
+      fetch('https://fakestoreapi.com/auth/login',{
+          method:'POST',
+          body:JSON.stringify({
+              username: name,
+              password
+          })
+      })
+          .then(res=>res.json())
+          .then(json=>setUser(json))
+  }
+
 
     useEffect(() => {
       onAuthStateChanged(auth, (user) => {
@@ -85,7 +70,7 @@ const useFirebase = () =>{
         .finally(() => setIsLoading(false));
     };
 
-    return {user, error, token, isLoading, authError, admin, count, googleSignIn, logOut, setError, setIsLoading, registerUser, emailSignIn, setCount};
+    return {user, error, token, isLoading, authError, admin, login, googleSignIn, logOut, setError, setIsLoading};
 };
 
 export default useFirebase;
