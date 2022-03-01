@@ -10,10 +10,15 @@ import Home from './Pages/Home/Home/Home';
 import {AppRoutes} from './routes';
 import AllProducts from './Pages/AllProducts/AllProducts';
 import Cart from './Pages/Cart/Cart/Cart';
+import { Spinner } from 'react-bootstrap';
+import useDelay from './hooks/useDelay';
 
 function App() {
+  const {loadTime} = useDelay();
   return (
     <div className="App">
+      {
+        loadTime.length ?
       <AuthProvider>
       <Router>
         <Navigation></Navigation>
@@ -26,6 +31,14 @@ function App() {
         </Routes>
       </Router>
       </AuthProvider>
+      :
+      <div className="d-flex justify-content-center align-items-center w-100" style={{height: '80vh'}}>
+      <div>
+      <Spinner animation="grow" size="sm" />
+      <Spinner animation="grow" />
+      </div>
+    </div>
+      }
     </div>
   );
 }

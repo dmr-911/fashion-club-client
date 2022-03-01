@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Spinner } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import Product from '../Home/Trending/Product/Product';
 
@@ -16,7 +16,7 @@ const AllProducts = () => {
     };
     return (
         <>
-        <Container className="mt-5 py-5">
+        {   products.length ?     <Container className="mt-5 py-5">
             <Row xs={1} className="g-3">
                 {
                     products.map(product => <Product
@@ -25,7 +25,14 @@ const AllProducts = () => {
                     ></Product>)
                 }
             </Row>
-        </Container>   
+        </Container>
+        :
+        <div className="d-flex justify-content-center align-items-center w-100" style={{height: '80vh'}}>
+        <div>
+        <Spinner animation="grow" size="sm" />
+        <Spinner animation="grow" />
+        </div>
+      </div>}   
         </>
     );
 };
