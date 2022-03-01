@@ -53,12 +53,17 @@
   }
 
   .btn-banner{
-    height: 28px;
-    border: none;
-    border-radius: 4px;
-    padding: 0 8px;
-    cursor: pointer;
-  }
+    color: white;
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 3px 10px;
+    transition: all .7s;
+}
+.btn-banner:hover{
+    background-color: rgb(27, 113, 163);
+    color: white;
+    border: 2px solid black;
+}
 
 
   @media (max-width: 688px) {

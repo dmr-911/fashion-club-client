@@ -88,7 +88,8 @@ const BannerProduct = () => {
                         <p><span className="text-danger fw-bold fs-3">${Math.ceil(product?.price - (20*product?.price/100))}</span> (20% off)</p>
                         <p><b>Colour : </b> Coming soon</p>
                         <p><b>Options : </b> Coming soon</p>
-                        <button className="btn-success my-3 me-3 btn-banner" onClick={()=>handleAddToBag(product.id)} disabled={disabled}>ADD TO BAG</button>
+                        <button className="my-3 me-3 btn-general" onClick={()=>handleAddToBag(product.id)} disabled={disabled}>ADD TO BAG</button>
+                        {/* <button className="my-3 me-3 btn-banner" onClick={()=>handleAddToBag(product.id)} disabled={disabled}>ADD TO BAG</button> */}
                         <button className="btn-danger my-3 btn-banner" onClick={handleModal}>Purchase Now</button>
 
                         {
