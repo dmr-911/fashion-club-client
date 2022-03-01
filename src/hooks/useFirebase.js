@@ -1,76 +1,65 @@
 import { useState, useEffect } from "react";
 import initializationAuthentication from "../firebase/firebase.init";
-import { signInWithEmailAndPassword, getIdToken, GoogleAuthProvider, getAuth, signInWithPopup, onAuthStateChanged, signOut, createUserWithEmailAndPassword,  updateProfile  } from "firebase/auth";
+import { signInWithEmailAndPassword, GoogleAuthProvider, getAuth, signInWithPopup, onAuthStateChanged, signOut, createUserWithEmailAndPassword,  updateProfile  } from "firebase/auth";
 
 
 initializationAuthentication();
-const useFirebase = () =>{
-    const auth = getAuth();
-    const [user, setUser] = useState({});
-    const [error, setError] = useState('');
-    const [authError, setAuthError] = useState('');
-    const [isLoading, setIsLoading] = useState(true);
-    const [admin, setAdmin] = useState(false);
-    const [token, setToken] = useState('');
+const auth = getAuth();
 
-    const googleProvider = new GoogleAuthProvider();
+const useFirebase =() =>{
+  const [user, setUser] = useState({});
+  const [error, setError] = useState('');
 
-    const googleSignIn = (location, navigate) => {
-      setIsLoading(true);
-      signInWithPopup(auth, googleProvider)
-        .then((result) => {
-          const user = result.user;
-          setAuthError('');
-          const destination = location?.state?.from || '/';
-          navigate(destination);
-        }).catch((error) => {
-          setAuthError(error.message);
-        }).finally(() => setIsLoading(false));
-    }
+  const googleProvider = new GoogleAuthProvider();
 
-    const login = (name, password) =>{
-      fetch('https://fakestoreapi.com/auth/login',{
-          method:'POST',
-          body:JSON.stringify({
-              username: name,
-              password
-          })
-      })
-          .then(res=>res.json())
-          .then(json=>setUser(json))
+  const googleSignIn = () =>{
+     return signInWithPopup(auth, googleProvider);
   }
 
-
-    useEffect(() => {
-      onAuthStateChanged(auth, (user) => {
-        if (user) {
+  const signUp = (email, password, name, navigate) =>{
+      createUserWithEmailAndPassword(auth, email, password)
+      .then((user) => {
           setUser(user);
-          getIdToken(user)
-          .then(idToken =>{
-            console.log(idToken);
-            setToken(idToken);
-          })
-        } 
-        else {
-          setUser({})
-        }
-        setIsLoading(false);
-      });
-    }, [auth]);
+          const newUser = {email, displayName : name};
 
-    const logOut = () => {
-      setIsLoading(true);
+      // send name to firebase after creation
+        updateProfile(auth.currentUser, {
+          displayName: name
+        }).then(() => {
+        }).catch((error) => {
+        });
+        navigate('/');
+      })
+      .catch((error) => {
+          setError(error.message);
+      });
+  };
+
+  const login = (email, password) =>{
+      return signInWithEmailAndPassword(auth, email, password)
+  };
+
+  const logOut = () =>{
       signOut(auth)
-        .then(() => {
-          setUser({});
+      .then(() => {
+          // Sign-out successful.
         })
         .catch((error) => {
           setError(error.message);
-        })
-        .finally(() => setIsLoading(false));
-    };
+        });
+  };
 
-    return {user, error, token, isLoading, authError, admin, login, googleSignIn, logOut, setError, setIsLoading};
+  useEffect(()=>{
+      onAuthStateChanged(auth, (user) => {
+          if (user) {
+              setUser(user);
+          } else {
+              setUser({});
+          }
+        });
+  },[]);
+
+  return {user, error, signUp, login, googleSignIn, logOut, setError, setUser};
 };
 
 export default useFirebase;
