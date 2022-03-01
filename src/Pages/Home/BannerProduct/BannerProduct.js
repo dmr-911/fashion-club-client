@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Breadcrumb, Carousel, Col, Container, Form, Row, Spinner } from 'react-bootstrap';
-import { useNavigate, useParams, Link } from 'react-router-dom';
+import { Carousel, Col, Container, Form, Row, Spinner } from 'react-bootstrap';
 import Rating from 'react-rating';
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

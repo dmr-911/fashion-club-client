@@ -9,12 +9,12 @@ export const AppRoutes = [
         exact : true,
         component : Home
     },
-    // {
-    //     name : 'LogIn',
-    //     path : '/login',
-    //     exact : true,
-    //     component : LogIn
-    // },
+    {
+        name : 'LogIn',
+        path : '/login',
+        exact : true,
+        component : LogIn
+    },
     {
         name : 'Home',
         path : '/signup',

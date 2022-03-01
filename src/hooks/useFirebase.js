@@ -20,7 +20,6 @@ const useFirebase =() =>{
       createUserWithEmailAndPassword(auth, email, password)
       .then((user) => {
           setUser(user);
-          const newUser = {email, displayName : name};
 
       // send name to firebase after creation
         updateProfile(auth.currentUser, {

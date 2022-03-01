@@ -1,31 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import Rating from 'react-rating';
 import PurchaseModal from '../../Home/BannerProduct/PurchaseModal';
 
 const Item = ({item}) => {
-    const [disabled, setDisabled] = useState(false);
-    const [clicked, setClicked] = useState(false);
-    const {image, title, description, price, id} = item;
-    const handleAddCart = (id) =>{
-        setDisabled(true);
-        fetch('https://fakestoreapi.com/carts/1',{
-            method:"PATCH",
-            body:JSON.stringify(
-                {
-                    userId: 1,
-                    date: new Date(),
-                    products:[{productId: id,quantity: 1}]
-                }
-            )
-        })
-            .then(res=>res.json())
-            .then(json=>console.log(json))
-    };
 
-    const handleClick = () =>{
-        setClicked(true);
-    };
+    const {image, title, description, price} = item;
+
 
     const [modalShow, setModalShow] = React.useState(false);
     const handleModal = () =>{

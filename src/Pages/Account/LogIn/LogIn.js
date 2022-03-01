@@ -6,7 +6,7 @@ import GoogleButton from 'react-google-button';
 import useAuth from '../../../hooks/useAuth';
 
 const LogIn = () => {
-  const {user, login, setError, googleSignIn} = useAuth();
+  const { login, setError, googleSignIn} = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const destination = location?.state?.from || '/';

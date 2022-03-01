@@ -6,14 +6,12 @@ import useAuth from '../../../hooks/useAuth';
 
 const Navigation = () => {
     const {user, logOut} = useAuth();
-    const [item, setItem] = useState({});
     const [count, setCount] = useState(0);
     const [products, setProducts] = useState([]);
     useEffect(()=>{
         fetch('https://fakestoreapi.com/carts/1')
             .then(res=>res.json())
             .then(json=>{
-                setItem(json)
                 setProducts(json.products)
             })
     },[]);
@@ -50,7 +48,7 @@ const Navigation = () => {
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                     </NavDropdown>
-                    <Nav.Link className="mx-2" as={Link} to={user.email ? "" : "/login"} title={user.email ? user.displayName : "Login"} className="mx-auto">
+                    <Nav.Link className="mx-2" as={Link} to="/" title={user.email ? user.displayName : "Login"} className="mx-auto">
                         Beauty
                     </Nav.Link>
                     </div>
@@ -66,7 +64,7 @@ const Navigation = () => {
                             <span className="nav-text">{count}</span>
                         </span>
                     </Nav.Link>
-                    <Nav.Link className="mx-2" as={Link} to={user.email ? "" : "/login"} title={user.email ? user.displayName : "Login"} className="mx-auto">
+                    <Nav.Link className="mx-2" as={Link} to="/" className="mx-auto">
           {              user.email ?
                         <span class="fa-solid fa-right-from-bracket sign-out" onClick={logOut}></span>
                         :
