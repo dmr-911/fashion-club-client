@@ -64,7 +64,7 @@ const Navigation = () => {
                         <span className="nav-icon nav-wishlist">
                         </span>
                     </Nav.Link>
-                    <Nav.Link className="mx-2" as={Link} to="/bag" className="mx-auto">
+                    <Nav.Link className="mx-2" as={Link} to="/cart" className="mx-auto">
                         <span className="nav-icon nav-cart">
                             <span className="nav-text">{count}</span>
                         </span>

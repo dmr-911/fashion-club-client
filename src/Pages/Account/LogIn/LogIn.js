@@ -33,9 +33,6 @@ const LogIn = () => {
       login(loginDetails.email, loginDetails.password);
     };
 
-    console.log(loginDetails);
-    console.log(user);
-
 
 
     return (
