@@ -24,7 +24,7 @@ const BannerProduct = () => {
         setIndex(selectedIndex);}
 
     return (
-        <div className="mt-5">
+        <Container className="mt-5">
             <Container className="pt-3">
             </Container>
             <Container>
@@ -111,7 +111,7 @@ const BannerProduct = () => {
                 </Row>
             </Container>
 
-        </div>
+        </Container>
     );
 };
 
