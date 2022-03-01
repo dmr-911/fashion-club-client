@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Breadcrumb, Carousel, Col, Container, Form, Row } from 'react-bootstrap';
 import { useNavigate, useParams, Link } from 'react-router-dom';
-import useAuth from '../../../hooks/useAuth';
 import Rating from 'react-rating';
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './BannerProduct.css';
 import PurchaseModal from './PurchaseModal';
@@ -11,7 +12,6 @@ const BannerProduct = () => {
     const [product, setProduct] = useState({});
     const [index, setIndex] = useState(0);
     const [disabled, setDisabled] = useState(false)
-
 
     useEffect(()=>{
         fetch('https://fakestoreapi.com/products/5')
@@ -32,7 +32,10 @@ const BannerProduct = () => {
             )
         })
             .then(res=>res.json())
-            .then(json=>console.log(json))
+            .then(json=>{
+                console.log(json)
+                toast("Added to the cart");
+            })
     };
     const handleClick = () =>{};
     const handleSelect = (selectedIndex, e) => {
@@ -134,7 +137,17 @@ const BannerProduct = () => {
                     onHide={() => setModalShow(false)}
                 />
             </Container>
-
+                <ToastContainer
+                position="top-center"
+                autoClose={1000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                />
         </Container>
     );
 };

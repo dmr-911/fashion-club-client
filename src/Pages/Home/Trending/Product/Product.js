@@ -3,6 +3,8 @@ import { Col, Row } from 'react-bootstrap';
 import Rating from 'react-rating';
 import './Product.css';
 import love from '../../../../images/navigation/wishlist.svg';
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Product = ({product}) => {
     const [disabled, setDisabled] = useState(false);
@@ -21,7 +23,10 @@ const Product = ({product}) => {
             )
         })
             .then(res=>res.json())
-            .then(json=>console.log(json))
+            .then(json=>{
+                console.log(json);
+                toast("Added to the cart")
+            })
     };
 
     const handleClick = () =>{
@@ -53,6 +58,17 @@ const Product = ({product}) => {
                 </div>
                 <button className="btn-general" onClick={()=> handleAddCart(id)} disabled={disabled}>Add to cart</button>
             </Col>
+            <ToastContainer
+                position="top-center"
+                autoClose={1000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                />
         </Row>
     );
 };
