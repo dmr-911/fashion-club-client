@@ -7,3 +7,9 @@
     width: 30px;
     background-color: transparent;
 }
+.favorite-icon{
+    height: 30px;
+    width: 30px;
+    color: red;
+    font-size: 28px;
+}

@@ -19,6 +19,7 @@ const BannerProduct = () => {
     },[]);
 
     const handleAddToBag = (id) =>{
+        setDisabled(true)
         fetch('https://fakestoreapi.com/carts/1',{
             method:"PATCH",
             body:JSON.stringify(
@@ -78,7 +79,7 @@ const BannerProduct = () => {
                         <p><b>Colour : </b> Coming soon</p>
                         <p><b>Options : </b> Coming soon</p>
                         <button className="btn btn-success w-25 fs-5 my-3 me-3" onClick={()=>handleAddToBag(product.id)} disabled={disabled}>ADD TO BAG</button>
-                        <button className="btn btn-danger w-25 fs-5 my-3" onClick={()=>handleAddToBag()} disabled={disabled}>Purchase Now</button>
+                        <button className="btn btn-danger w-25 fs-5 my-3" onClick={()=>handleAddToBag()}>Purchase Now</button>
 
                         {
                             product?.features && <>
