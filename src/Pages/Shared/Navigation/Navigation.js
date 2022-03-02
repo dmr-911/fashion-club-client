@@ -60,9 +60,9 @@ const Navigation = () => {
                         </span>
                     </Nav.Link>
                     <Nav.Link className="mx-2" as={Link} to="/cart" className="mx-auto">
-                        <span className="nav-icon nav-cart">
+                    { user.email && <span className="nav-icon nav-cart">
                             <span className="nav-text">{count}</span>
-                        </span>
+                        </span>}
                     </Nav.Link>
                     <Nav.Link className="mx-2" as={Link} to="/login" className="mx-auto">
           {              user.email ?

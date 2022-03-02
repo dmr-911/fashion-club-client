@@ -38,10 +38,12 @@ const useFirebase =() =>{
       .finally(()=> setIsLoading(false));
   };
 
+
   const login = (email, password) =>{
       return signInWithEmailAndPassword(auth, email, password)
   };
 
+  // Logout function
   const logOut = () =>{
     setIsLoading(true);
       signOut(auth)
@@ -53,6 +55,7 @@ const useFirebase =() =>{
         }).finally(() => setIsLoading(false));
   };
 
+  // user observer
   useEffect(()=>{
       onAuthStateChanged(auth, (user) => {
           if (user) {

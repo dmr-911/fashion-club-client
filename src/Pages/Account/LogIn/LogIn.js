@@ -6,7 +6,7 @@ import GoogleButton from 'react-google-button';
 import useAuth from '../../../hooks/useAuth';
 
 const LogIn = () => {
-  const { login, setError, googleSignIn, setIsLoading } = useAuth();
+  const { login, setError, googleSignIn, setIsLoading, user } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const destination = location?.state?.from || '/';
@@ -23,7 +23,6 @@ const LogIn = () => {
       setLoginDetails(newState);
     }
     const handleGoogleSignIn = () =>{
-    //   googleSignIn(location, navigate);
       googleSignIn()
       .then((result) => {
         navigate(destination);
@@ -36,12 +35,13 @@ const LogIn = () => {
       e.preventDefault();
       login(loginDetails.email, loginDetails.password)
       .then(user =>{
-        navigate(destination);
+        navigate('/');
       })
       .catch((error) => {
         setError(error.message)
       });
-    }
+    };
+
 
 
 

@@ -47,7 +47,6 @@ const SignUp = () => {
       </div>
       <b className="d-block mb-2">Give the information's</b>
         {
-          // !isLoading &&
                <form onSubmit={handleRegisterSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Control
