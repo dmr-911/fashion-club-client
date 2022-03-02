@@ -10,6 +10,7 @@ import AllProducts from './Pages/AllProducts/AllProducts';
 import Cart from './Pages/Cart/Cart/Cart';
 import { Spinner } from 'react-bootstrap';
 import useDelay from './hooks/useDelay';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 
 function App() {
   const {loadTime} = useDelay();
@@ -19,9 +20,9 @@ function App() {
         loadTime.length ?
       <AuthProvider>
       <Router>
-        <Navigation></Navigation>
+      <Navigation></Navigation>
         <Routes>
-          <Route path="" element={<Home></Home>}></Route>
+          <Route path="" element={<PrivateRoute><Home></Home></PrivateRoute>}></Route>
           <Route path="login" element={<LogIn></LogIn>}></Route>
           <Route path="signUp" element={<SignUp></SignUp>}></Route>
           <Route path="allProducts" element={<AllProducts></AllProducts>}></Route>
