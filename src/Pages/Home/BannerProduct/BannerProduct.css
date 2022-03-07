@@ -1,5 +1,14 @@
+
 .icon-color{
     color: green;
+}
+.banner-img{
+  height: 510px;
+  width: 100%;
+  overflow: hidden;
+}
+.bottom-banner{
+  margin-top: 60px;
 }
 .round {
     position: relative;
@@ -48,8 +57,8 @@
   }
 
   .tail-banner-img{
-      height: 60px;
-      width: 60px;
+      height: 80px;
+      width: 120px;
   }
 
   .btn-banner{

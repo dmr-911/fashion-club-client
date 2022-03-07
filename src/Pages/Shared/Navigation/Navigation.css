@@ -1,6 +1,12 @@
+.custom-navbar{
+    background-color: white;
+  }
+.navigation-bar{
+    background-color: white!important;
+}
 .nav-icon{
     float: left;
-    height: 30px;
+    height: 20px;
     padding: 7px 5px 0 3px;
     width: 40px;
     margin-top: -6px;
@@ -17,15 +23,19 @@
 }
 .nav-text{
     position: relative;
-    bottom: 0px;
-    right: 3px;
+    bottom: 7px;
+    right: 10px;
+    font-size: 13px;
 }
 .navbar-collapse{
     flex-grow: 0;
 }
 .sign-out{
     color: black;
-    font-size: 26px;
+    font-size: 20px;
+}
+.nav-hr{
+    top: 50px!important;
 }
 
 
@@ -34,3 +44,8 @@
         flex-direction: column;
     }
 }
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: none;
+}}

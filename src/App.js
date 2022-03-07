@@ -11,6 +11,7 @@ import Cart from './Pages/Cart/Cart/Cart';
 import { Spinner } from 'react-bootstrap';
 import useDelay from './hooks/useDelay';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+import useAuth from './hooks/useAuth';
 
 function App() {
   const {loadTime} = useDelay();
@@ -20,6 +21,9 @@ function App() {
         loadTime.length ?
       <AuthProvider>
       <Router>
+      {/* {
+        user.email && <Navigation></Navigation>
+      } */}
       <Navigation></Navigation>
         <Routes>
           <Route path="" element={<PrivateRoute><Home></Home></PrivateRoute>}></Route>

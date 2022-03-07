@@ -8,7 +8,6 @@ import './Home.css';
 const Home = () => {
     return (
         <Container fluid className="mt-5 pt-2">
-            <hr />
             <BannerProduct></BannerProduct>
             <hr />
             <Trending></Trending>

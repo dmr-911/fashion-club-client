@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Navigation.css';
-import {Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import {Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
@@ -24,7 +24,8 @@ const Navigation = () => {
     },[products])
     
     return (
-        <Navbar variant="light" expand="lg" className="fixed-top" bg="light">
+        <div className="custom-navbar bg-light">
+        <Navbar expand="lg" className="fixed-top container w-100 justify-content-between navigation-bar">
                 <Navbar.Brand as={Link} to="/"><h2>Fashion Club</h2></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
@@ -48,23 +49,23 @@ const Navigation = () => {
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                     </NavDropdown>
-                    <Nav.Link className="mx-2" as={Link} to="/" className="mx-auto">
+                    <Nav.Link as={Link} to="/" className="mx-auto">
                         Beauty
                     </Nav.Link>
                     </div>
                     <div className="d-flex align-items-center nav-drop">
 
 
-                    <Nav.Link className="mx-2" as={Link} to="/" className="mx-auto" disabled>
+                    <Nav.Link as={Link} to="/" className="mx-auto" disabled>
                         <span className="nav-icon nav-wishlist">
                         </span>
                     </Nav.Link>
-                    <Nav.Link className="mx-2" as={Link} to="/cart" className="mx-auto">
+                    <Nav.Link as={Link} to="/cart" className="mx-auto">
                     { user.email && <span className="nav-icon nav-cart">
                             <span className="nav-text">{count}</span>
                         </span>}
                     </Nav.Link>
-                    <Nav.Link className="mx-2" as={Link} to="/login" className="mx-auto">
+                    <Nav.Link as={Link} to="/login" className="mx-auto">
           {              user.email ?
                         <span title={user.email ? user.displayName : "Login"} className="fa-solid fa-right-from-bracket sign-out" onClick={logOut}></span>
                         :
@@ -75,6 +76,8 @@ const Navigation = () => {
                 </Nav>
                 </Navbar.Collapse>
         </Navbar>
+        <hr className="fixed-top nav-hr"/>
+        </div>
     );
 };
 

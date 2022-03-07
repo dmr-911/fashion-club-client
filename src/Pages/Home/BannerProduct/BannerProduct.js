@@ -3,7 +3,10 @@ import { Carousel, Col, Container, Form, Row, Spinner } from 'react-bootstrap';
 import Rating from 'react-rating';
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import bannerImage from '../../../images/banner/lovely-european-model-stylish-fur-coat-dress-wearing-ankle-boot-black-leather-holding-brown-handbag.png';
+import banner1 from '../../../images/banner/banner1.png';
+import banner2 from '../../../images/banner/banner2.png';
+import banner3 from '../../../images/banner/banner3.png';
 import './BannerProduct.css';
 import PurchaseModal from './PurchaseModal';
 
@@ -57,27 +60,27 @@ const BannerProduct = () => {
                     <Carousel className="h-75 banner-slider" activeIndex={index} onSelect={handleSelect}>
                         <Carousel.Item>
                             <img
-                            src={product?.image}
-                            className="img-fluid"
+                            src={bannerImage}
+                            className="banner-img"
                             alt="First slide"
-                            height="218"
-                            width="218"
                             />
                             <Carousel.Caption>
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>
+                    <div className="bottom-banner">
                     <Row xs={1} md={3} lg={3} className="side-banner">
                         <Col>
-                            <img src={product.image} className="tail-banner-img" alt="" />
+                            <img src={banner1} className="tail-banner-img" alt="" />
                         </Col>
                         <Col>
-                            <img src={product.image} className="tail-banner-img" alt="" />
+                            <img src={banner2} className="tail-banner-img" alt="" />
                         </Col>
                         <Col>
-                            <img src={product.image} className="tail-banner-img" alt="" />
+                            <img src={banner3} className="tail-banner-img" alt="" />
                         </Col>
                     </Row>
+                    </div>
                     </Col>
                     <Col xs={12} md={7} className="text-start">
                         <p>Fashion club exclusives</p>

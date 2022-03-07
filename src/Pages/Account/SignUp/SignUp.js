@@ -90,7 +90,6 @@ const SignUp = () => {
           </Button>
           </form>
         }
-      {/* {error && <small className="text-danger">{error}</small>} */}
                 <p className="fw-bold my-2">
                  Already have an account ? Please{" "}
                  <Link to="/login">Login</Link>
