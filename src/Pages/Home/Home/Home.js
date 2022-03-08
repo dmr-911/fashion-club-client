@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import Footer from '../../Footer/Footer';
 import BannerProduct from '../BannerProduct/BannerProduct';
 import Categories from '../Categories/Categories/Categories';
 import Exclusives from '../Exclusives/Exclusives';
@@ -22,6 +23,7 @@ const Home = () => {
             <Offer></Offer>
             <HotDeals></HotDeals>
             <Notify></Notify>
+            <Footer></Footer>
         </Container>
     );
 };
