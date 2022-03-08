@@ -22,7 +22,7 @@ const Categories = () => {
                 <h4><b>Shop by categories</b></h4>
                 <button className="btn-general" onClick={handleClick}>View all</button>
             </div>
-            <Row xs={1} md={2} lg={4} className="g-4">
+            <Row xs={1} md={3} lg={4} className="g-4">
                 {
                     categories.map(category =><Category
                     key={category.id}

@@ -14,17 +14,13 @@ const Category = ({category}) => {
         setShow(false);
     }
     return (
-        <Col>
-        <Card title={title} onMouseEnter={handleMouseOver} onMouseLeave={handleMouseLeave}>
-          <div className="service-card rounded" style={{backgroundImage : `linear-gradient(rgba(68, 114, 151, 0.5), rgba(0,0,0,0.9)), url(${image})`, backgroundSize: 'cover'}}>
-            <div className="back" style={{backgroundImage : `linear-gradient(rgba(68, 114, 151, 0.5), rgba(0,0,0,0.9)), url(${image})`,  backgroundSize: 'cover'}}>
-            </div>
-            {
-                show && <h5 className="service-title fw-bold">{title.slice(0, 20)}...</h5>
-            }
+      <Col className="deal-container border border-1 rounded category-container" onMouseEnter={handleMouseOver} onMouseLeave={handleMouseLeave} style={{backgroundImage: `url(${image})`}}>
+      {
+          show && <div className="deal h-100 w-100 d-flex justify-content-center align-items-center text-white">
+          <h3>{title}</h3>
           </div>
-        </Card>
-      </Col>
+      }
+  </Col>
     );
 };
 
