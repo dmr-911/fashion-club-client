@@ -26,10 +26,10 @@ function App() {
       } */}
       <Navigation></Navigation>
         <Routes>
-          <Route path="" element={<PrivateRoute><Home></Home></PrivateRoute>}></Route>
+          <Route path="" element={<Home></Home>}></Route>
           <Route path="login" element={<LogIn></LogIn>}></Route>
           <Route path="signUp" element={<SignUp></SignUp>}></Route>
-          <Route path="allProducts" element={<PrivateRoute><AllProducts></AllProducts></PrivateRoute>}></Route>
+          <Route path="allProducts" element={<AllProducts></AllProducts>}></Route>
           <Route path="cart" element={<PrivateRoute><Cart></Cart></PrivateRoute>}></Route>
         </Routes>
       </Router>
