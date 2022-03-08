@@ -1,8 +1,12 @@
 .notify-input{
     border: none;
     height: 30px;
+    width: 250px;
     margin-right: 5px;
 }
 .notify-input:focus{
     border: none;
 }
+::placeholder {
+    font-size: small;
+  }

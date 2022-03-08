@@ -7,7 +7,7 @@ const Notify = () => {
         <Container className="mid-banner mb-5 d-flex align-items-center justify-content-around">
             <h5 className="text-white">Get access to exclusives deals</h5>
             <form>
-                <input className="notify-input" type="text" /><button className="btn-general">Notify Me</button>
+                <input className="notify-input" type="text" placeholder="Enter your email or phone number" /><button className="btn-general">Notify Me</button>
             </form>
         </Container>
     );
