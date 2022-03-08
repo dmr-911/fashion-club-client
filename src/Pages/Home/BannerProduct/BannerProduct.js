@@ -55,7 +55,7 @@ const BannerProduct = () => {
                     <Container className="pt-3">
             </Container>
             <Container>
-                <Row>
+                <Row xs={1} md={2} className="g-4">
                     <Col xs={12} md={4} style={{height: "auto"}}>
                     <Carousel className="h-75 banner-slider" activeIndex={index} onSelect={handleSelect}>
                         <Carousel.Item>

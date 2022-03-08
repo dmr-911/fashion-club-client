@@ -50,9 +50,11 @@ const Item = ({product}) => {
                                 />({product.rating?.count})
                     </small>
                 </p>
-                <button className="btn-favorite ms-5" onClick={handleClick}>{
+                {/* <button className="btn-favorite ms-5" onClick={handleClick}>{
                     clicked ? <i className="fa-solid fa-heart favorite-icon d-block"></i> : <img src={love} className="favorite-img" alt="" />
-                }</button>
+                }</button> */}
+    
+
                 </div>
                 <button className="btn-general" onClick={()=> handleAddCart(id)} disabled={disabled}>Add to cart</button>
             </Col>

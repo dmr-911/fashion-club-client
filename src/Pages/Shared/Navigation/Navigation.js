@@ -24,8 +24,8 @@ const Navigation = () => {
     },[products])
     
     return (
-        <div className="custom-navbar bg-light">
-        <Navbar expand="lg" className="fixed-top container w-100 justify-content-between navigation-bar">
+        <Container fluid className="nav-container fixed-top">
+        <Navbar expand="lg" className="container w-100 justify-content-between navigation-bar">
                 <Navbar.Brand as={Link} to="/"><h2>Zzazzo Fashion</h2></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
@@ -77,7 +77,7 @@ const Navigation = () => {
                 </Navbar.Collapse>
         </Navbar>
         <hr className="fixed-top nav-hr"/>
-        </div>
+        </Container>
     );
 };
 

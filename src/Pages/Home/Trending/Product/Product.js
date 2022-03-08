@@ -43,8 +43,8 @@ const Product = ({product}) => {
                 <p><small>{description}</small></p>
                 <del className="me-3">${price + (price*20/100)}</del>
                 <b style={{fontSize: '18px'}}>${price}</b>
-                <div className="d-flex align-items-center my-1">
-                <p><small><Rating
+                <div className="d-flex my-1">
+                <p className="pt-3"><small><Rating
                                 initialRating={product.rating?.rate}
                                 readonly
                                 emptySymbol="far fa-star icon-color"
