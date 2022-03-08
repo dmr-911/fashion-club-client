@@ -3,13 +3,13 @@
     background-color: transparent;
 }
 .favorite-img{
-    height: 30px;
-    width: 30px;
+    height: 16px;
+    width: 16px;
     background-color: transparent;
 }
 .favorite-icon{
-    height: 30px;
-    width: 30px;
+    height: 16px;
+    width: 16px;
     color: red;
-    font-size: 28px;
+    font-size: 16px;
 }

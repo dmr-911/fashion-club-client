@@ -1,0 +1,7 @@
+.item-card{
+    width: 270px;
+}
+.description-container{
+    display: block;
+    min-height: 105px;
+}
