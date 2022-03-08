@@ -83,7 +83,7 @@ const BannerProduct = () => {
                     </div>
                     </Col>
                     <Col xs={12} md={7} className="text-start">
-                        <p>Fashion club exclusives</p>
+                        <p>Zzazzo Fashion exclusives</p>
                         <h4>{product?.title}</h4>
                         <b><small>{product.category}</small></b><br />
                         <p>{product.description}</p>

@@ -1,4 +1,4 @@
-# Fashion Club
+# Zzazzo Fashion
 
 A ReactJS application. [Live site link](https://fashion-club-f5817.web.app/).
 

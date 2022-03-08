@@ -5,6 +5,7 @@ import Categories from '../Categories/Categories/Categories';
 import Exclusives from '../Exclusives/Exclusives';
 import HotDeals from '../HotDeals/HotDeals';
 import MiddleBanner from '../MiddleBanner/MiddleBanner';
+import Notify from '../Notify/Notify';
 import Offer from '../Offer/Offer';
 import Trending from '../Trending/Trending/Trending';
 import './Home.css';
@@ -20,6 +21,7 @@ const Home = () => {
             <Exclusives></Exclusives>
             <Offer></Offer>
             <HotDeals></HotDeals>
+            <Notify></Notify>
         </Container>
     );
 };

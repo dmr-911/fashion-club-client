@@ -13,7 +13,7 @@ const Exclusives = () => {
     return (
         <Container className="my-5">
             <div className="d-flex justify-content-between mb-3">
-                <h4><b>Fashion club exclusives</b></h4>
+                <h4><b>Zzazzo Fashion exclusives</b></h4>
                 <button className="btn-general" onClick={handleClick}>View all</button>
             </div>
             <Row xs={1} md={3} lg={4} className="g-col-4">

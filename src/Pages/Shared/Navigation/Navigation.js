@@ -26,7 +26,7 @@ const Navigation = () => {
     return (
         <div className="custom-navbar bg-light">
         <Navbar expand="lg" className="fixed-top container w-100 justify-content-between navigation-bar">
-                <Navbar.Brand as={Link} to="/"><h2>Fashion Club</h2></Navbar.Brand>
+                <Navbar.Brand as={Link} to="/"><h2>Zzazzo Fashion</h2></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                 <Nav
