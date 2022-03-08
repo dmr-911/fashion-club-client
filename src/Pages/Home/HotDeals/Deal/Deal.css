@@ -1,0 +1,27 @@
+.deal-container{
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    padding: 0;
+}
+.deal{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}
+
+.deal-container:hover {
+    animation-name: div-text-hover;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+  }
+  
+  @keyframes deal-container {
+    0% {
+      background: linear-gradient(45deg, #36D8FF, #00acee, #66757f);
+    }
+    100% {
+      background: linear-gradient(45deg, #36D8FF, #00acee, #66757f);
+    }
+  }

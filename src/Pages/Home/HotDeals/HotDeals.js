@@ -11,8 +11,8 @@ const HotDeals = () => {
     },[]);
 
     return (
-        <Container>
-            <h2 className="text-start mb-4">Hot deals!</h2>
+        <Container className="mb-5">
+            <h2 className="text-start mb-4 g-3">Hot deals!</h2>
             <Row xs={1} md={4}>
                 {
                     deals.map(deal =><Deal
