@@ -37,7 +37,7 @@ const Item = ({product}) => {
         {/* <div xs={1} md={2} className="border border-1 rounded mt-3 mb-1 py-1"> */}
                 <img src={image} className="trending-product-img mb-3" alt="" />
             <Col className="text-start">
-                <h5>{title.slice(0,20)}...</h5>
+                <h5 title={title}>{title.slice(0,20)}...</h5>
                 <p title={description}><small className="description-container">{description?.slice(0,150)}...</small></p>
                 <del className="me-3">${price + (price*20/100)}</del>
                 <b style={{fontSize: '18px'}}>${price}</b>

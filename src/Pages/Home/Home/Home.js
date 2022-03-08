@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import BannerProduct from '../BannerProduct/BannerProduct';
 import Categories from '../Categories/Categories/Categories';
 import Exclusives from '../Exclusives/Exclusives';
+import HotDeals from '../HotDeals/HotDeals';
 import MiddleBanner from '../MiddleBanner/MiddleBanner';
 import Offer from '../Offer/Offer';
 import Trending from '../Trending/Trending/Trending';
@@ -18,6 +19,7 @@ const Home = () => {
             <MiddleBanner></MiddleBanner>
             <Exclusives></Exclusives>
             <Offer></Offer>
+            <HotDeals></HotDeals>
         </Container>
     );
 };

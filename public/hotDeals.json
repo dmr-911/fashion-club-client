@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "img" : "https://i.ibb.co/80b035L/hd1.png",
+        "name" : "Long Shirt"
+    },
+    {
+        "id": 2,
+        "img" : "https://i.ibb.co/G9m4PQq/hd4.png",
+        "name" : "Modern Clothing"
+    },
+    {
+        "id": 3,
+        "img" : "https://i.ibb.co/nfT14M7/hd3.png",
+        "name" : "Fashion"
+    },
+    {
+        "id": 4,
+        "img" : "https://i.ibb.co/CnmdFVC/hd2.png",
+        "name" : "Jacket"
+    }
+]
