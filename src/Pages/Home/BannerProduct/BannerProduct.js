@@ -56,7 +56,7 @@ const BannerProduct = () => {
             </Container>
             <Container>
                 <Row>
-                    <Col xs={12} md={5} style={{height: "auto"}}>
+                    <Col xs={12} md={4} style={{height: "auto"}}>
                     <Carousel className="h-75 banner-slider" activeIndex={index} onSelect={handleSelect}>
                         <Carousel.Item>
                             <img
@@ -69,15 +69,15 @@ const BannerProduct = () => {
                         </Carousel.Item>
                     </Carousel>
                     <div className="bottom-banner">
-                    <Row xs={1} md={3} lg={3} className="side-banner">
+                    <Row xs={1} md={3} lg={3} className="side-banner g-2">
                         <Col>
-                            <img src={banner1} className="tail-banner-img" alt="" />
+                            <img src={banner1} className="tail-banner-img img-fluid" alt="" />
                         </Col>
                         <Col>
-                            <img src={banner2} className="tail-banner-img" alt="" />
+                            <img src={banner2} className="tail-banner-img img-fluid" alt="" />
                         </Col>
                         <Col>
-                            <img src={banner3} className="tail-banner-img" alt="" />
+                            <img src={banner3} className="tail-banner-img img-fluid" alt="" />
                         </Col>
                     </Row>
                     </div>
