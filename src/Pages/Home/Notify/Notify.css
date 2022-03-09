@@ -1,3 +1,8 @@
+.notify-banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 .notify-input{
     border: none;
     height: 30px;
@@ -10,3 +15,9 @@
 ::placeholder {
     font-size: small;
   }
+
+  @media (max-width: 688px) {
+    .notify-banner{
+        flex-direction: column;
+    }
+}

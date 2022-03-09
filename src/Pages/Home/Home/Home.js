@@ -22,8 +22,8 @@ const Home = () => {
             <Exclusives></Exclusives>
             <Offer></Offer>
             <HotDeals></HotDeals>
-            {/* 
             <Notify></Notify>
+            {/* 
             <Footer></Footer> 
             */}
         </Container>
