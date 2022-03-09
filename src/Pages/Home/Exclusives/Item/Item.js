@@ -33,7 +33,8 @@ const Item = ({product}) => {
         setClicked(true);
     };
     return (
-        <Col className="item-card">
+        <Col>
+        <div className="item-card">
         {/* <div xs={1} md={2} className="border border-1 rounded mt-3 mb-1 py-1"> */}
                 <img src={image} className="trending-product-img mb-3" alt="" />
             <Col className="text-start">
@@ -50,7 +51,7 @@ const Item = ({product}) => {
                                 />({product.rating?.count})
                     </small>
                 </p>
-                <button className="btn-favorite ms-5" onClick={handleClick}>{
+                <button className="btn-favorite btn-item ms-5" onClick={handleClick}>{
                     clicked ? <i className="fa-solid fa-heart favorite-icon d-block"></i> : <img src={love} className="favorite-img" alt="" />
                 }</button>
     
@@ -69,6 +70,7 @@ const Item = ({product}) => {
                 draggable
                 pauseOnHover
                 />
+            </div>
         </Col>
     );
 };

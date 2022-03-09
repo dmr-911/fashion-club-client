@@ -16,7 +16,7 @@ const Exclusives = () => {
                 <h4><b>Zzazzo Fashion exclusives</b></h4>
                 <button className="btn-general" onClick={handleClick}>View all</button>
             </div>
-            <Row xs={1} md={3} lg={4} className="g-col-4">
+            <Row xs={1} md={3} lg={4} className="g-4">
                 {
                     products.map(product => <Item
                     key={product.id}

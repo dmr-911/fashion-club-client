@@ -5,3 +5,12 @@
     display: block;
     min-height: 105px;
 }
+
+@media (max-width: 688px) {
+    .item-card{
+        margin: 0 auto;
+    }
+}
+@media (min-width: 689px) and (max-width: 992px){
+
+    }

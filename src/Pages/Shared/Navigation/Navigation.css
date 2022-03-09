@@ -46,7 +46,7 @@
         flex-direction: column;
     }
     .nav-hr{
-        top: 50px!important;
+        top: 48px!important;
     }
 }
 @media (min-width: 689px) and (max-width: 992px){
