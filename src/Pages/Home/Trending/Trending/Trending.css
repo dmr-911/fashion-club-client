@@ -1,7 +1,7 @@
 .btn-general{
     color: red;
     border: 2px solid #ff0000;
-    /* border-radius: 5px; */
+    cursor: pointer;
     padding: 3px 10px;
     transition: all .7s;
 }

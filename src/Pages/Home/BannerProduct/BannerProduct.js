@@ -26,7 +26,9 @@ const BannerProduct = () => {
     },[]);
 
     const handleAddToBag = (id) =>{
+        toast("Added to the cart");
         setDisabled(true)
+
         fetch('https://fakestoreapi.com/carts/1',{
             method:"PATCH",
             body:JSON.stringify(
@@ -39,8 +41,6 @@ const BannerProduct = () => {
         })
             .then(res=>res.json())
             .then(json=>{
-                console.log(json)
-                toast("Added to the cart");
             })
     };
     const handleSelect = (selectedIndex, e) => {
