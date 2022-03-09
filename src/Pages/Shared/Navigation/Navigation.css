@@ -1,12 +1,12 @@
-.nav-container{
-    height: auto;
-    background-color: white;
-}
 .custom-navbar{
     background-color: white;
   }
 .navigation-bar{
     background-color: white!important;
+}
+.nav-drop{
+    display: flex;
+    flex-direction: row;
 }
 .nav-icon{
     float: left;
@@ -31,9 +31,7 @@
     right: 10px;
     font-size: 13px;
 }
-.navbar-collapse{
-    flex-grow: 0;
-}
+
 .sign-out{
     color: black;
     font-size: 20px;
@@ -48,8 +46,9 @@
         flex-direction: column;
     }
 }
-@media (min-width: 992px){
-.navbar-expand-lg .navbar-collapse {
+@media (min-width: 689px) and (max-width: 992px){
+    .nav-drop{flex-direction: column;}
+    .navbar-expand-lg .navbar-collapse {
     display: flex!important;
     flex-basis: none;
 }}

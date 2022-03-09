@@ -25,7 +25,7 @@ const Navigation = () => {
     
     return (
         <Container fluid className="nav-container fixed-top">
-        <Navbar expand="lg" className="container w-100 justify-content-between navigation-bar">
+        <Navbar expand="lg" className="container w-100 navigation-bar">
                 <Navbar.Brand as={Link} to="/"><h2>Zzazzo Fashion</h2></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
@@ -33,7 +33,7 @@ const Navigation = () => {
                     className="mx-auto w-100 my-2 my-lg-0 justify-content-around"
                 >
                     
-                    <div className="d-flex align-items-center nav-drop">
+                    <div className="nav-drop">
                     <NavDropdown className="mx-2" title="Men" id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Men</NavDropdown.Item>
                     <NavDropdown.Divider />
@@ -53,7 +53,7 @@ const Navigation = () => {
                         Beauty
                     </Nav.Link>
                     </div>
-                    <div className="d-flex align-items-center nav-drop">
+                    <div className="nav-drop">
 
 
                     <Nav.Link as={Link} to="/" className="mx-auto" disabled>
