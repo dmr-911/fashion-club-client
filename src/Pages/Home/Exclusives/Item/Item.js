@@ -32,6 +32,11 @@ const Item = ({product}) => {
     const handleClick = () =>{
         setClicked(true);
     };
+
+    const handleFavorite = () =>{
+        setClicked(false);
+    };
+    
     return (
         <Col>
         <div className="item-card">
@@ -51,9 +56,15 @@ const Item = ({product}) => {
                                 />({product.rating?.count})
                     </small>
                 </p>
-                <button className="btn-favorite btn-item ms-5" onClick={handleClick}>{
-                    clicked ? <i className="fa-solid fa-heart favorite-icon d-block"></i> : <img src={love} className="favorite-img" alt="" />
+                {
+                    !clicked ? <button className="btn-favorite ms-5" onClick={handleClick}>
+                    <img src={love} className="favorite-img" alt="" />
+                </button>
+                :
+                <button className="btn-favorite ms-5" onClick={handleFavorite}>{
+                    <i className="fa-solid fa-heart favorite-icon d-block"></i>
                 }</button>
+                }
     
 
                 </div>
