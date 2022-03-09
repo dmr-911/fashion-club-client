@@ -67,17 +67,13 @@
     color: white;
     border: 2px solid black;
 }
-
-input[type="radio"].green:checked + label span{
-  background-color:green;
-  border:1px solid blue;
+.color-btn{
+  height: 13px;
+  width: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
 }
-
-input[type="radio"].red:checked + label span{
-  background-color:red;
-  border:1px solid blue;
-}
-
 
   @media (max-width: 688px) {
     .banner-slider{

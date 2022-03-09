@@ -13,10 +13,14 @@ import PurchaseModal from './PurchaseModal';
 const BannerProduct = () => {
     const [product, setProduct] = useState({});
     const [index, setIndex] = useState(0);
-    const [disabled, setDisabled] = useState(false)
+    const [disabled, setDisabled] = useState(false);
+
+    const colors = [
+        "red", "green", "blue"
+    ];
 
     useEffect(()=>{
-        fetch('https://fakestoreapi.com/products/17')
+        fetch('/product.json')
         .then(res => res.json())
         .then(data => setProduct(data))
     },[]);
@@ -45,7 +49,11 @@ const BannerProduct = () => {
     const [modalShow, setModalShow] = React.useState(false);
     const handleModal = () =>{
         setModalShow(true);
-    }
+    };
+    const handleSelectColor = (value) =>{
+        console.log(value);
+        toast(`${value} color selected.`)
+    };
 
     return (
         <Container className="mt-5">
@@ -108,25 +116,11 @@ const BannerProduct = () => {
                             </> 
                         }   
                     <div className="w-50 d-flex justify-content-between align-items-center my-3">
-                        <b>Product details</b>
+                        <b>Available colors</b>
                         <div className="round">
-                        <Form.Control
-                                type="color"
-                                id="exampleColorInput"
-                                defaultValue="#563d7c"
-                                title="Choose your color"
-                        />
-                        {/* <div class="container">
-                        <div>
-                        <input type="radio" checked="checked" class="blue" id="radio01" name="radio" />
-                        <label for="radio01"><span></span></label>
-                        </div>
-
-                        <div>
-                        <input type="radio" id="radio02" class="green" name="radio" />
-                        <label for="radio02"><span></span>Radio Button 2</label>
-                        </div>
-                        </div> */}
+                            {
+                                colors.map((color, i) =><button key={i} onClick={()=>handleSelectColor(color)} className="color-btn mx-1" style={{backgroundColor: `${color}`}}></button>)
+                            }
                         </div>
                     </div>    
                     <div className="w-50 d-flex justify-content-between"> 

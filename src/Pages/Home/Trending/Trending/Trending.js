@@ -8,7 +8,7 @@ const Trending = () => {
     const [products, setProducts] = useState([]);
     const navigate = useNavigate();
     useEffect(()=>{
-        fetch('https://fakestoreapi.com/products?limit=5')
+        fetch('/trending.json')
         .then(res => res.json())
         .then(data => setProducts(data))
     },[]);

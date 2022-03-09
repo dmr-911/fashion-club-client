@@ -1,12 +1,15 @@
-.nav-container{
-    background-color: white!important;
-  }
-.navigation-bar{
+.dropdown-menu{
+    margin-top: 15px!important;
+}
+.navigation-bar, .nav-container{
     background-color: white!important;
 }
 .nav-drop{
     display: flex;
     flex-direction: row;
+}
+#basic-nav-dropdown{
+    background-color: white;
 }
 .nav-icon{
     float: left;

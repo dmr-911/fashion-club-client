@@ -37,7 +37,7 @@ const Product = ({product}) => {
     }
 
     return (
-        <Row xs={1} md={2} className="mt-3 mb-1 py-1 g-4">
+        <Row xs={1} md={2} className=" py-1 g-4">
             <Col md={4}>
                 <img src={image} className="trending-product-img" alt="" />
             </Col>

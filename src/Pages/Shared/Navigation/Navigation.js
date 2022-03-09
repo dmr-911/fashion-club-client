@@ -28,7 +28,8 @@ const Navigation = () => {
         <Navbar expand="lg" className="container w-100 navigation-bar">
                 <Navbar.Brand as={Link} to="/"><h2>Zzazzo Fashion</h2></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
-                <Navbar.Collapse id="navbarScroll">
+                <Navbar.Collapse id="navbarScroll"
+                >
                 <Nav
                     className="mx-auto w-100 my-2 my-lg-0 justify-content-around"
                 >
