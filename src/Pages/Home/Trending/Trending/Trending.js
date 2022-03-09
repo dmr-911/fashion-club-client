@@ -18,7 +18,7 @@ const Trending = () => {
     }
     
     return (
-        <Container>
+        <Container className="trending-product">
             <div className="d-flex justify-content-between mb-3">
                 <h4><b>Trending Clothes</b></h4>
                 <button className="btn-general" onClick={handleClick}>View all</button>
