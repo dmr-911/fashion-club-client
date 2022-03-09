@@ -18,8 +18,8 @@ const Home = () => {
             <hr />
             <Trending></Trending>
             <Categories></Categories>
-            {/* 
             <MiddleBanner></MiddleBanner>
+            {/* 
             <Exclusives></Exclusives>
             <Offer></Offer>
             <HotDeals></HotDeals>
