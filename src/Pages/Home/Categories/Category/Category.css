@@ -9,3 +9,14 @@
     width: 202px;
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
 }
+
+@media (max-width: 688px) {
+    .deal-container{
+        width: 100%;
+    }
+}
+@media (min-width: 689px) and (max-width: 992px){
+    .deal-container{
+        width: 100%;
+    }
+}

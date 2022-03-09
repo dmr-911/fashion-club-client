@@ -45,10 +45,18 @@
     .nav-drop{
         flex-direction: column;
     }
+    .nav-hr{
+        top: 50px!important;
+    }
 }
 @media (min-width: 689px) and (max-width: 992px){
     .nav-drop{flex-direction: column;}
     .navbar-expand-lg .navbar-collapse {
     display: flex!important;
     flex-basis: none;
-}}
+    }
+    .nav-hr{
+        top: 55px!important;
+    }
+    
+    }
