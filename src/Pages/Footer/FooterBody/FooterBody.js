@@ -50,7 +50,9 @@ const FooterBody = () => {
                 <div>
                 <h5 className="my-4">EXTRA 10% DISCOUNT EVERYTHING!</h5> 
                 <small className="d-block mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas sit orci et tellus id non. Elit lectus egestas bibendum ultrices ut.</small>
+                <div className="input-section">
                 <input type="text" className="notify-input"/><button className="btn-footer  mt-2">Subscribe</button>
+                </div>
                 </div>   
                 </div>
             </Col>

@@ -49,8 +49,20 @@ li{
 }
 
 @media (min-width: 689px) and (max-width: 992px){
+    h5, li{
+        text-align: center;
+    }
     .right-footer-section{
         border-left: 0;
         border-top: 1.5px solid #D4023E;
+    }
+    .input-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .notify-input{
+        display: block;
+        margin-top: 8px;
     }
     }
