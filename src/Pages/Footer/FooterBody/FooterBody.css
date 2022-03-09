@@ -37,3 +37,20 @@ li{
     color: white;
     border: 2px solid black;
 }
+
+@media (max-width: 688px) {
+    h5, li{
+        text-align: center;
+    }
+    .right-footer-section{
+        border-left: 0;
+        border-top: 1.5px solid #D4023E;
+    }
+}
+
+@media (min-width: 689px) and (max-width: 992px){
+    .right-footer-section{
+        border-left: 0;
+        border-top: 1.5px solid #D4023E;
+    }
+    }

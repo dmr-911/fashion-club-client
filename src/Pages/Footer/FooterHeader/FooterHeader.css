@@ -1,3 +1,16 @@
+.footer-header{
+    justify-content: space-between;
+}
 .footer-header-text{
+    display: inline-block;
     width: 730px;
+}
+
+@media (max-width: 688px) {
+    .footer-header{
+        flex-direction: column;
+    }
+    .footer-header-text{
+        width: 100%;
+    }
 }

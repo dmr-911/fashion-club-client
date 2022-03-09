@@ -35,7 +35,7 @@ const FooterBody = () => {
                 </ul>
                 </Col>
                 <Col>
-                <h6>Social</h6>
+                <h5>Social</h5>
                 <ul>
                     <li><a as={Link} className="footer-link">Facebook</a></li>
                     <li><a as={Link} className="footer-link">Instragram</a></li>
@@ -45,12 +45,12 @@ const FooterBody = () => {
                 </Col>
             </Row>
             </Col>
-            <Col xs={12} lg={5} className="right-footer-section px-4 pt-5">
+            <Col xs={12} lg={5} className="right-footer-section px-4 pt-5 pb-4">
                 <div className="mx-auto">
                 <div>
                 <h5 className="my-4">EXTRA 10% DISCOUNT EVERYTHING!</h5> 
                 <small className="d-block mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas sit orci et tellus id non. Elit lectus egestas bibendum ultrices ut.</small>
-                <input type="text" className="notify-input"/><button className="btn-footer">Subscribe</button>
+                <input type="text" className="notify-input"/><button className="btn-footer  mt-2">Subscribe</button>
                 </div>   
                 </div>
             </Col>
