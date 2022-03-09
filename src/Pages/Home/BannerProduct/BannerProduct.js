@@ -116,6 +116,17 @@ const BannerProduct = () => {
                                 defaultValue="#563d7c"
                                 title="Choose your color"
                         />
+                        {/* <div class="container">
+                        <div>
+                        <input type="radio" checked="checked" class="blue" id="radio01" name="radio" />
+                        <label for="radio01"><span></span></label>
+                        </div>
+
+                        <div>
+                        <input type="radio" id="radio02" class="green" name="radio" />
+                        <label for="radio02"><span></span>Radio Button 2</label>
+                        </div>
+                        </div> */}
                         </div>
                     </div>    
                     <div className="w-50 d-flex justify-content-between"> 

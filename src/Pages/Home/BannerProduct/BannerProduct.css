@@ -68,6 +68,16 @@
     border: 2px solid black;
 }
 
+input[type="radio"].green:checked + label span{
+  background-color:green;
+  border:1px solid blue;
+}
+
+input[type="radio"].red:checked + label span{
+  background-color:red;
+  border:1px solid blue;
+}
+
 
   @media (max-width: 688px) {
     .banner-slider{

@@ -14,16 +14,18 @@ import './Home.css';
 const Home = () => {
     return (
         <Container fluid className="mt-5 pt-2">
-            {/* <BannerProduct></BannerProduct>
+            <BannerProduct></BannerProduct>
             <hr />
             <Trending></Trending>
+            {/* 
             <Categories></Categories>
             <MiddleBanner></MiddleBanner>
             <Exclusives></Exclusives>
             <Offer></Offer>
             <HotDeals></HotDeals>
             <Notify></Notify>
-            <Footer></Footer> */}
+            <Footer></Footer> 
+            */}
         </Container>
     );
 };

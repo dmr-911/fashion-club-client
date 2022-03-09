@@ -1,4 +1,5 @@
 import './App.css';
+import 'materialize-css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './Pages/Shared/Navigation/Navigation';
 import 'bootstrap/dist/css/bootstrap.min.css';
