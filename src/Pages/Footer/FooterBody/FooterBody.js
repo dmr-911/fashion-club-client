@@ -13,34 +13,34 @@ const FooterBody = () => {
                 <Col>
                 <h5>How can we help?</h5>
                 <ul className="text-start">
-                    <li><a as={Link} className="footer-link">Help</a></li>
-                    <li><a as={Link} className="footer-link">Track my order</a></li>
-                    <li><a as={Link} className="footer-link">Returns</a></li>
-                    <li><a as={Link} className="footer-link">Size guide</a></li>
-                    <li><a as={Link} className="footer-link">Student discount</a></li>
-                    <li><a as={Link} className="footer-link">Discounts and promo codes</a></li>
-                    <li><a as={Link} className="footer-link">Get exclusive offers and update</a></li>
+                    <li><a as={Link} to="/" className="footer-link">Help</a></li>
+                    <li><a as={Link} to="/" className="footer-link">Track my order</a></li>
+                    <li><a as={Link} to="/" className="footer-link">Returns</a></li>
+                    <li><a as={Link} to="/" className="footer-link">Size guide</a></li>
+                    <li><a as={Link} to="/" className="footer-link">Student discount</a></li>
+                    <li><a as={Link} to="/" className="footer-link">Discounts and promo codes</a></li>
+                    <li><a as={Link} to="/" className="footer-link">Get exclusive offers and update</a></li>
                 </ul>
                 </Col>
                 <Col>
                 <h5>About us</h5>
                 <ul>
-                    <li><a as={Link} className="footer-link">About Fashion Club</a></li>
-                    <li><a as={Link} className="footer-link">Investor relations</a></li>
-                    <li><a as={Link} className="footer-link">Careers</a></li>
-                    <li><a as={Link} className="footer-link">Become an affilitate</a></li>
-                    <li><a as={Link} className="footer-link">Become a partner</a></li>
-                    <li><a as={Link} className="footer-link">Contact us</a></li>
-                    <li><a as={Link} className="footer-link">Press</a></li>
+                    <li><a as={Link} to="/" className="footer-link">About Fashion Club</a></li>
+                    <li><a as={Link} to="/" className="footer-link">Investor relations</a></li>
+                    <li><a as={Link} to="/" className="footer-link">Careers</a></li>
+                    <li><a as={Link} to="/" className="footer-link">Become an affilitate</a></li>
+                    <li><a as={Link} to="/" className="footer-link">Become a partner</a></li>
+                    <li><a as={Link} to="/" className="footer-link">Contact us</a></li>
+                    <li><a as={Link} to="/" className="footer-link">Press</a></li>
                 </ul>
                 </Col>
                 <Col>
                 <h5>Social</h5>
                 <ul>
-                    <li><a as={Link} className="footer-link">Facebook</a></li>
-                    <li><a as={Link} className="footer-link">Instragram</a></li>
-                    <li><a as={Link} className="footer-link">YouTube</a></li>
-                    <li><a as={Link} className="footer-link">Twitter</a></li>
+                    <li><a as={Link} to="/" className="footer-link">Facebook</a></li>
+                    <li><a as={Link} to="/" className="footer-link">Instragram</a></li>
+                    <li><a as={Link} to="/" className="footer-link">YouTube</a></li>
+                    <li><a as={Link} to="/" className="footer-link">Twitter</a></li>
                 </ul>
                 </Col>
             </Row>
