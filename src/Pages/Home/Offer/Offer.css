@@ -1,8 +1,11 @@
 .offer-container{
    height: 430px;
    background-image: url('../../../images/offer/20.png');
+   background-size: cover;
    font-family: 'Cormorant' !important;
    padding-top: 70px;
+   width: 100%;
+   overflow: hidden;
 }
 .offer{
     width: 257px;
@@ -16,7 +19,7 @@
  top: 55px;
 }
 .offer-body{
-    font-size: 198px;
+    font-size: 12rem;
     font-weight: 700;
     transform: scale(.7, .8);
     box-sizing: border-box;
@@ -26,4 +29,10 @@
     bottom: 60px;
     left: 37px;
     font-size: 30px;
+}
+
+@media (max-width: 688px) {
+   .offer{
+       margin: 0 auto;
+   }
 }
