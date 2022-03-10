@@ -15,6 +15,9 @@ const BannerProduct = () => {
     const [index, setIndex] = useState(0);
     const [disabled, setDisabled] = useState(false);
 
+    const images = [
+        bannerImage, banner1, banner2
+    ];
     const colors = [
         "red", "green", "blue"
     ];
@@ -40,11 +43,11 @@ const BannerProduct = () => {
             )
         })
             .then(res=>res.json())
-            .then(json=>{
-            })
+            .then(json=>{})
     };
     const handleSelect = (selectedIndex, e) => {
-        setIndex(selectedIndex);}
+        setIndex(selectedIndex);
+    }
 
     const [modalShow, setModalShow] = React.useState(false);
     const handleModal = () =>{
@@ -54,6 +57,8 @@ const BannerProduct = () => {
         console.log(value);
         toast(`${value} color selected.`)
     };
+
+    console.log(index);
 
     return (
         <Container className="mt-5">
@@ -66,27 +71,25 @@ const BannerProduct = () => {
                 <Row xs={1} md={2} className="g-4">
                     <Col xs={12} md={4} style={{height: "auto"}}>
                     <Carousel className="h-75 banner-slider" activeIndex={index} onSelect={handleSelect}>
-                        <Carousel.Item>
-                            <img
-                            src={bannerImage}
-                            className="banner-img"
-                            alt="First slide"
-                            />
-                            <Carousel.Caption>
-                            </Carousel.Caption>
-                        </Carousel.Item>
+                        {
+                            images.map((image, i)=> <Carousel.Item key={i}>
+                                <img
+                                src={image}
+                                className="banner-img"
+                                alt="First slide"
+                                />
+                                <Carousel.Caption>
+                                </Carousel.Caption>
+                            </Carousel.Item>)
+                        }
                     </Carousel>
                     <div className="bottom-banner">
-                    <Row xs={1} md={3} lg={3} className="side-banner g-2">
-                        <Col>
-                            <img src={banner1} className="tail-banner-img img-fluid" alt="" />
-                        </Col>
-                        <Col>
-                            <img src={banner2} className="tail-banner-img img-fluid" alt="" />
-                        </Col>
-                        <Col>
-                            <img src={banner3} className="tail-banner-img img-fluid" alt="" />
-                        </Col>
+                    <Row xs={1} md={3} lg={3} className="side-banner g-1">
+                        {
+                            images.map((img, i) =><Col key={i}>
+                            <img src={img} className="tail-banner-img" alt="" />
+                        </Col>)
+                        }
                     </Row>
                     </div>
                     </Col>
